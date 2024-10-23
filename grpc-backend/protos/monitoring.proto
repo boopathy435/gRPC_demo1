@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package monitoring;
+
+// Define the data structure
+message MonitoringData {
+  float cpuUsage = 1;
+  float memoryUsage = 2;
+  float networkIn = 3;
+  float networkOut = 4;
+}
+
+// Request message
+message MonitoringRequest {
+  string startTime = 1;
+  string endTime = 2;
+}
+
+// Service definition
+service MonitoringService {
+  rpc GetMonitoringData (MonitoringRequest) returns (stream MonitoringData);
+}
