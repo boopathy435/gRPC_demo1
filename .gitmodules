@@ -1,0 +1,3 @@
+[submodule "grpc-frontend"]
+	path = grpc-frontend
+	url = https://github.com/boopathy435/gRPC_demo1_frontend.git
